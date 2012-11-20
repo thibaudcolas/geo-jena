@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:gn="http://www.geonames.org/ontology#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
+<gn:Feature rdf:about="http://sws.geonames.org/5352844/">
+<rdfs:isDefinedBy>http://sws.geonames.org/5352844/about.rdf</rdfs:isDefinedBy>
+<gn:name>Golden Gate Bridge</gn:name>
+<gn:alternateName xml:lang="dv">ރަން ދޮރާށި ފާލަން</gn:alternateName>
+<gn:alternateName xml:lang="ko">골든게이트 교</gn:alternateName>
+<gn:alternateName xml:lang="ta">கோல்டன் கேற் பாலம்</gn:alternateName>
+<gn:alternateName xml:lang="ja">ゴールデンゲートブリッジ</gn:alternateName>
+<gn:alternateName xml:lang="th">สะพานโกลเดนเกต</gn:alternateName>
+<gn:alternateName xml:lang="lt">Aukso Vartų tiltas</gn:alternateName>
+<gn:alternateName xml:lang="pap">Brug di Golden Gate</gn:alternateName>
+<gn:alternateName xml:lang="vi">Cầu Cổng Vàng</gn:alternateName>
+<gn:alternateName xml:lang="cs">Golden Gate</gn:alternateName>
+<gn:alternateName xml:lang="hr">Golden Gate</gn:alternateName>
+<gn:alternateName xml:lang="fy">Golden Gate Brêge</gn:alternateName>
+<gn:alternateName xml:lang="cs">Golden Gate Bridge</gn:alternateName>
+<gn:alternateName xml:lang="de">Golden Gate Bridge</gn:alternateName>
+<gn:officialName xml:lang="en">Golden Gate Bridge</gn:officialName>
+<gn:alternateName xml:lang="fi">Golden Gate Bridge</gn:alternateName>
+<gn:alternateName xml:lang="fr">Golden Gate Bridge</gn:alternateName>
+<gn:alternateName xml:lang="it">Golden Gate Bridge</gn:alternateName>
+<gn:alternateName xml:lang="nl">Golden Gate Bridge</gn:alternateName>
+<gn:alternateName xml:lang="no">Golden Gate Bridge</gn:alternateName>
+<gn:alternateName xml:lang="da">Golden Gate-broen</gn:alternateName>
+<gn:alternateName xml:lang="sv">Golden Gate-bron</gn:alternateName>
+<gn:alternateName xml:lang="nl">Golden Gate brug</gn:alternateName>
+<gn:alternateName xml:lang="nl">Golden Gate-brug</gn:alternateName>
+<gn:alternateName xml:lang="is">Golden Gate-brúin</gn:alternateName>
+<gn:alternateName xml:lang="fo">Golden Gate brúnni</gn:alternateName>
+<gn:alternateName xml:lang="hu">Golden Gate híd</gn:alternateName>
+<gn:alternateName xml:lang="hu">Golden Gate-híd</gn:alternateName>
+<gn:alternateName xml:lang="tr">Golden Gate Köprüsü</gn:alternateName>
+<gn:alternateName xml:lang="bs">Golden Gate most</gn:alternateName>
+<gn:alternateName xml:lang="sh">Golden Gate most</gn:alternateName>
+<gn:alternateName xml:lang="eo">Golden-Gate-Ponto</gn:alternateName>
+<gn:alternateName xml:lang="eu">Golden Gate zubia</gn:alternateName>
+<gn:alternateName xml:lang="ms">Jambatan Golden Gate</gn:alternateName>
+<gn:alternateName xml:lang="id">Jembatan Golden Gate</gn:alternateName>
+<gn:alternateName xml:lang="pl">Most Golden Gate</gn:alternateName>
+<gn:alternateName xml:lang="ro">Podul Golden Gate</gn:alternateName>
+<gn:alternateName xml:lang="kw">Pons Golden Gate</gn:alternateName>
+<gn:alternateName xml:lang="gl">Ponte Golden Gate</gn:alternateName>
+<gn:alternateName xml:lang="pt">Ponte Golden Gate</gn:alternateName>
+<gn:alternateName xml:lang="cy">Pont Golden Gate</gn:alternateName>
+<gn:alternateName xml:lang="es">Puente Golden Gate</gn:alternateName>
+<gn:alternateName xml:lang="lv">Zelta vārtu tilts</gn:alternateName>
+<gn:alternateName xml:lang="fa">پل گلدن گیت</gn:alternateName>
+<gn:alternateName xml:lang="ar">جسر البوابة الذهبية</gn:alternateName>
+<gn:alternateName xml:lang="pnb">گولڈن گیٹ پل</gn:alternateName>
+<gn:alternateName xml:lang="he">גשר שער הזהב</gn:alternateName>
+<gn:alternateName xml:lang="sr">Голден гејт</gn:alternateName>
+<gn:alternateName xml:lang="mk">Голден Гејт</gn:alternateName>
+<gn:alternateName xml:lang="bg">Голдън Гейт</gn:alternateName>
+<gn:alternateName xml:lang="bg">Голдън Гейт Бридж</gn:alternateName>
+<gn:alternateName xml:lang="be">Залатыя Вароты</gn:alternateName>
+<gn:alternateName xml:lang="uk">Золоті Ворота</gn:alternateName>
+<gn:alternateName xml:lang="ru">Золотые Ворота</gn:alternateName>
+<gn:alternateName xml:lang="hy">Ոսկե Դարպասներ</gn:alternateName>
+<gn:alternateName xml:lang="ka">ოქროს კარიბჭე</gn:alternateName>
+<gn:alternateName xml:lang="mr">गोल्डन गेट ब्रिज</gn:alternateName>
+<gn:alternateName xml:lang="hi">गोल्डन गेट सेतु</gn:alternateName>
+<gn:alternateName xml:lang="te">గోల్డెన్ గేట్ వంతెన</gn:alternateName>
+<gn:alternateName xml:lang="my">ဂိုးလ်ဒင်းဂိတ် တံတား</gn:alternateName>
+<gn:alternateName xml:lang="zh">金门大桥</gn:alternateName>
+<gn:featureClass rdf:resource="http://www.geonames.org/ontology#S"/>
+<gn:featureCode rdf:resource="http://www.geonames.org/ontology#S.BDG"/>
+<gn:countryCode>US</gn:countryCode>
+<wgs84_pos:lat>37.81965</wgs84_pos:lat>
+<wgs84_pos:long>-122.47886</wgs84_pos:long>
+<wgs84_pos:alt>-27</wgs84_pos:alt>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/5391997/"/>
+<gn:parentCountry rdf:resource="http://sws.geonames.org/6252001/"/>
+<gn:parentADM1 rdf:resource="http://sws.geonames.org/5332921/"/>
+<gn:parentADM2 rdf:resource="http://sws.geonames.org/5391997/"/>
+<gn:nearbyFeatures rdf:resource="http://sws.geonames.org/5352844/nearby.rdf"/>
+<gn:locationMap rdf:resource="http://www.geonames.org/5352844/golden-gate-bridge.html"/>
+<gn:wikipediaArticle rdf:resource="http://ar.wikipedia.org/wiki/%D8%AC%D8%B3%D8%B1_%D8%A7%D9%84%D8%A8%D9%88%D8%A7%D8%A8%D8%A9_%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9"/>
+<gn:wikipediaArticle rdf:resource="http://bg.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D1%82_%D0%93%D0%BE%D0%BB%D0%B4%D1%8A%D0%BD_%D0%93%D0%B5%D0%B9%D1%82"/>
+<gn:wikipediaArticle rdf:resource="http://bs.wikipedia.org/wiki/Golden_Gate_most"/>
+<gn:wikipediaArticle rdf:resource="http://cs.wikipedia.org/wiki/Golden_Gate_Bridge"/>
+<gn:wikipediaArticle rdf:resource="http://da.wikipedia.org/wiki/Golden_Gate-broen"/>
+<gn:wikipediaArticle rdf:resource="http://de.wikipedia.org/wiki/Golden_Gate_Bridge"/>
+<gn:wikipediaArticle rdf:resource="http://dv.wikipedia.org/wiki/%DE%83%DE%A6%DE%82%DE%B0_%DE%8B%DE%AE%DE%83%DE%A7%DE%81%DE%A8_%DE%8A%DE%A7%DE%8D%DE%A6%DE%82%DE%B0"/>
+<gn:wikipediaArticle rdf:resource="http://en.wikipedia.org/wiki/Golden_Gate_Bridge"/>
+<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Golden_Gate_Bridge"/>
+<gn:wikipediaArticle rdf:resource="http://eo.wikipedia.org/wiki/Golden-Gate-Ponto"/>
+<gn:wikipediaArticle rdf:resource="http://es.wikipedia.org/wiki/Puente_Golden_Gate"/>
+<gn:wikipediaArticle rdf:resource="http://fa.wikipedia.org/wiki/%D9%BE%D9%84_%DA%AF%D9%84%D8%AF%D9%86_%DA%AF%DB%8C%D8%AA"/>
+<gn:wikipediaArticle rdf:resource="http://fi.wikipedia.org/wiki/Golden_Gate_Bridge"/>
+<gn:wikipediaArticle rdf:resource="http://fr.wikipedia.org/wiki/Golden_Gate_Bridge"/>
+<gn:wikipediaArticle rdf:resource="http://he.wikipedia.org/wiki/%D7%92%D7%A9%D7%A8_%D7%A9%D7%A2%D7%A8_%D7%94%D7%96%D7%94%D7%91"/>
+<gn:wikipediaArticle rdf:resource="http://hr.wikipedia.org/wiki/Golden_Gate_most"/>
+<gn:wikipediaArticle rdf:resource="http://hu.wikipedia.org/wiki/Golden_Gate_h%C3%ADd"/>
+<gn:wikipediaArticle rdf:resource="http://id.wikipedia.org/wiki/Jembatan_Golden_Gate"/>
+<gn:wikipediaArticle rdf:resource="http://it.wikipedia.org/wiki/Golden_Gate_Bridge"/>
+<gn:wikipediaArticle rdf:resource="http://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%B2%E3%83%BC%E3%83%88%E3%83%96%E3%83%AA%E3%83%83%E3%82%B8"/>
+<gn:wikipediaArticle rdf:resource="http://ka.wikipedia.org/wiki/%E1%83%92%E1%83%9D%E1%83%9A%E1%83%93%E1%83%94%E1%83%9C_%E1%83%92%E1%83%94%E1%83%98%E1%83%A2%E1%83%98_%28%E1%83%AE%E1%83%98%E1%83%93%E1%83%98%29"/>
+<gn:wikipediaArticle rdf:resource="http://ko.wikipedia.org/wiki/%EA%B3%A8%EB%93%A0_%EA%B2%8C%EC%9D%B4%ED%8A%B8_%EB%B8%8C%EB%A6%AC%EC%A7%80"/>
+<gn:wikipediaArticle rdf:resource="http://la.wikipedia.org/wiki/Pons_Aureae_Portae"/>
+<gn:wikipediaArticle rdf:resource="http://lt.wikipedia.org/wiki/Aukso_vart%C5%B3_tiltas"/>
+<gn:wikipediaArticle rdf:resource="http://lv.wikipedia.org/wiki/Zelta_v%C4%81rtu_tilts"/>
+<gn:wikipediaArticle rdf:resource="http://nl.wikipedia.org/wiki/Golden_Gate_Bridge"/>
+<gn:wikipediaArticle rdf:resource="http://no.wikipedia.org/wiki/Golden_Gate_Bridge"/>
+<gn:wikipediaArticle rdf:resource="http://pl.wikipedia.org/wiki/Most_Golden_Gate"/>
+<gn:wikipediaArticle rdf:resource="http://pt.wikipedia.org/wiki/Golden_Gate_Bridge"/>
+<gn:wikipediaArticle rdf:resource="http://ro.wikipedia.org/wiki/Podul_Golden_Gate"/>
+<gn:wikipediaArticle rdf:resource="http://ru.wikipedia.org/wiki/%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D1%8B%D0%B5_%D0%92%D0%BE%D1%80%D0%BE%D1%82%D0%B0_%28%D0%BC%D0%BE%D1%81%D1%82%29"/>
+<gn:wikipediaArticle rdf:resource="http://sh.wikipedia.org/wiki/Golden_Gate_most"/>
+<gn:wikipediaArticle rdf:resource="http://sk.wikipedia.org/wiki/Golden_Gate_Bridge"/>
+<gn:wikipediaArticle rdf:resource="http://sv.wikipedia.org/wiki/Golden_Gate-bron"/>
+<gn:wikipediaArticle rdf:resource="http://ta.wikipedia.org/wiki/%E0%AE%95%E0%AF%8B%E0%AE%B2%E0%AF%8D%E0%AE%9F%E0%AE%A9%E0%AF%8D_%E0%AE%95%E0%AF%87%E0%AE%B1%E0%AF%8D_%E0%AE%AA%E0%AE%BE%E0%AE%B2%E0%AE%AE%E0%AF%8D"/>
+<gn:wikipediaArticle rdf:resource="http://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%81%E0%B8%A5%E0%B9%80%E0%B8%94%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%95"/>
+<gn:wikipediaArticle rdf:resource="http://tr.wikipedia.org/wiki/Golden_Gate_K%C3%B6pr%C3%BCs%C3%BC"/>
+<gn:wikipediaArticle rdf:resource="http://uk.wikipedia.org/wiki/%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D1%96_%D0%92%D0%BE%D1%80%D0%BE%D1%82%D0%B0_%28%D0%BC%D1%96%D1%81%D1%82%29"/>
+<gn:wikipediaArticle rdf:resource="http://vi.wikipedia.org/wiki/C%E1%BA%A7u_C%E1%BB%95ng_V%C3%A0ng"/>
+<gn:wikipediaArticle rdf:resource="http://zh.wikipedia.org/wiki/%E9%87%91%E9%97%A8%E5%A4%A7%E6%A1%A5"/>
+</gn:Feature>
+<foaf:Document rdf:about="http://sws.geonames.org/5352844/about.rdf">
+<foaf:primaryTopic rdf:resource="http://sws.geonames.org/5352844/"/>
+<cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+<cc:attributionURL rdf:resource="http://sws.geonames.org/5352844/"/>
+<cc:attributionName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeoNames</cc:attributionName>
+<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-01-15</dcterms:created>
+<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-02-17</dcterms:modified>
+</foaf:Document>
+</rdf:RDF>

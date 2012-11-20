@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="description" content="GeoJena is an exploration of the GeoNames ontology built with GWT, GAE and Apache Jena.">
+    <meta name="author" content="Mathilde Salthun-Lassalle, Thibaud Colas">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="GeoJena.css">
+
+    <title>GeoNames Explorer</title>
+
+    <script type="text/javascript" language="javascript" src="geojena/geojena.nocache.js"></script>
+  </head>
+  <body>
+    <header>
+	    <span class="f1 pull-left"></span>
+	    <span class="f2 pull-left"></span>
+	    <span class="f3 pull-left"></span>
+	    <a href="https://github.com/ThibWeb/geo-jena"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+        
+        <h1><a href="http://www.geonames.org/"><span class="geonames">GeoNames</span></a> Explorer with <a href="https://jena.apache.org/">Jena</a></h1>
+    </header>
+    <div id="main">
+	    <noscript>
+	      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+	        Your web browser must have JavaScript enabled
+	        in order for this application to display correctly.
+	      </div>
+	    </noscript>
+	    
+	    <table align="center">
+          <tr>
+            <td id="nameFieldContainer"></td>
+            <td id="sendButtonContainer"></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="color:red;" id="errorLabelContainer"></td>
+          </tr>
+        </table>
+        
+        <div id="tabPanel"></div>
+        
+    </div>
+    <footer>
+      <div class="container">
+        <hr/>
+        <p>A project by Mathilde Salthun-Lassalle and <a href="http://thibaudcolas.fr">Thibaud Colas</a>.<br/>
+        Built with <a href="https://jena.apache.org/">Apache Jena</a>, <a href="https://developers.google.com/web-toolkit/">Google Web Toolkit</a> and <a href="https://developers.google.com/appengine/">Google App Engine</a>.</p>
+      </div>
+    </footer>
+  </body>
+</html>

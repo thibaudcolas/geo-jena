@@ -1,0 +1,7 @@
+*.class
+*.jar
+*.war
+gwt-unitCache/
+war/geojena/
+war/WEB-INF/deploy/
+war/WEB-INF/classes/
