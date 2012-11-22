@@ -14,7 +14,6 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.FlexTable;
-import com.google.gwt.user.client.ui.Grid;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
@@ -42,23 +41,6 @@ public class GeoJena implements EntryPoint {
 	 * This is the entry point method.
 	 */
 	public void onModuleLoad() {
-		explorerService.initializeExplorer(new AsyncCallback<Integer>() {
-			public void onFailure(Throwable caught) {
-				
-			}
-
-			public void onSuccess(Integer result) {
-				
-			}
-		});
-		
-		
-		
-		
-		
-		
-		
-		
 		TabPanel tp = new TabPanel();
 		tp.setWidth("100%");
 		
@@ -79,13 +61,18 @@ public class GeoJena implements EntryPoint {
 		});
 		
 		final FlexTable allCodesTable = new FlexTable();
+		allCodesTable.addStyleName("FlexTable");
 		
 		explorerService.retrieveResult(ExplorerService.allCodesVariables, ExplorerService.allCodesWhere, new AsyncCallback<LinkedList<LinkedList<String>>>() {
 			public void onFailure(Throwable caught) {
 				allCodesTable.setText(0, 0, caught.toString());
 			}
 			public void onSuccess(LinkedList<LinkedList<String>> results) {
-				int i = 0, j;
+				allCodesTable.setText(0, 0, "URI");
+				allCodesTable.setText(0, 1, "Class");
+				allCodesTable.setText(0, 2, "Label");
+				allCodesTable.setText(0, 3, "Definition");
+				int i = 1, j;
 				for (LinkedList<String> result : results) {
 					j = 0;
 					for (String val : result) {
@@ -101,22 +88,60 @@ public class GeoJena implements EntryPoint {
 		allCodes.add(allCodesTable);
 		
 		VerticalPanel vegeCodes = new VerticalPanel();
+		Label vegeCodesLabel = new Label("All GeoNames feature's codes");
+	    vegeCodesLabel.setHorizontalAlignment(VerticalPanel.ALIGN_CENTER);
+	    
+	    final TextArea vegeCodesQuery = new TextArea();
+	    vegeCodesQuery.setWidth("100%");
+	    vegeCodesQuery.setVisibleLines(8);
+	    explorerService.writeQuery(ExplorerService.vegeCodesVariables, ExplorerService.vegeCodesWhere, new AsyncCallback<String>() {
+	      public void onFailure(Throwable caught) {
+	        vegeCodesQuery.setText(caught.toString());
+	      }
+	      public void onSuccess(String query) {
+	        vegeCodesQuery.setText(query);
+	      }
+	    });
+	    
+	    final FlexTable vegeCodesTable = new FlexTable();
+	    vegeCodesTable.addStyleName("FlexTable");
+	    
+	    explorerService.retrieveResult(ExplorerService.vegeCodesVariables, ExplorerService.vegeCodesWhere, new AsyncCallback<LinkedList<LinkedList<String>>>() {
+	      public void onFailure(Throwable caught) {
+	        vegeCodesTable.setText(0, 0, caught.toString());
+	      }
+	      public void onSuccess(LinkedList<LinkedList<String>> results) {
+	        vegeCodesTable.setText(0, 0, "URI");
+	        vegeCodesTable.setText(0, 1, "Definition");
+	        int i = 1, j;
+	        for (LinkedList<String> result : results) {
+	          j = 0;
+	          for (String val : result) {
+	            vegeCodesTable.setText(i, j++, val);
+	          }
+	          i++;
+	        }
+	      }
+	    });
+	    
+	    vegeCodes.add(vegeCodesLabel);
+	    vegeCodes.add(vegeCodesQuery);
+	    vegeCodes.add(vegeCodesTable);
+	    
+	    
 		VerticalPanel codesCount = new VerticalPanel();
 		VerticalPanel iceRegex = new VerticalPanel();
 		VerticalPanel molecule = new VerticalPanel();
 		VerticalPanel spJoint = new VerticalPanel();
 		
 		tp.add(allCodes, "All codes");
-		tp.add(new Label("Bar"), "Vegetation codes");
+		tp.add(vegeCodes, "Vegetation codes");
 		tp.add(new Label("Baz"), "Codes count");
 		tp.add(new Label("Baz"), "/ice/");
 		tp.add(new Label("Baz"), "Molecule");
 		tp.add(new Label("Baz"), "S-P Joint");
 		
 		RootPanel.get("tabPanel").add(tp);
-		
-		
-		
 		
 		
 		

@@ -16,6 +16,16 @@
     <url-pattern>/geojena/greet</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+        <servlet-name>initServlet</servlet-name>
+        <servlet-class>com.github.thibweb.geojena.server.InitServiceImpl</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>initServlet</servlet-name>
+        <url-pattern>/geojena/init</url-pattern>
+    </servlet-mapping>
+  
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>GeoJena.html</welcome-file>
