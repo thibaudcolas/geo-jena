@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:gn="http://www.geonames.org/ontology#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
+<gn:Feature rdf:about="http://sws.geonames.org/6295630/">
+<rdfs:isDefinedBy>http://sws.geonames.org/6295630/about.rdf</rdfs:isDefinedBy>
+<gn:name>Earth</gn:name>
+<gn:alternateName xml:lang="nl">Aarde</gn:alternateName>
+<gn:shortName xml:lang="en">Earth</gn:shortName>
+<gn:alternateName xml:lang="ca">el món</gn:alternateName>
+<gn:alternateName xml:lang="es">el planeta</gn:alternateName>
+<gn:alternateName xml:lang="de">Erde</gn:alternateName>
+<gn:officialName xml:lang="hu">Föld</gn:officialName>
+<gn:alternateName xml:lang="en">Globe</gn:alternateName>
+<gn:alternateName xml:lang="it">Globo</gn:alternateName>
+<gn:alternateName xml:lang="no">Jorden</gn:alternateName>
+<gn:alternateName xml:lang="eu">Lurra</gn:alternateName>
+<gn:alternateName xml:lang="fi">Maa</gn:alternateName>
+<gn:officialName xml:lang="fr">Monde</gn:officialName>
+<gn:alternateName xml:lang="eo">Mondo</gn:alternateName>
+<gn:alternateName xml:lang="it">Mondo</gn:alternateName>
+<gn:alternateName xml:lang="es">Mundo</gn:alternateName>
+<gn:alternateName xml:lang="eu">Mundua</gn:alternateName>
+<gn:alternateName xml:lang="es">nuestro planeta</gn:alternateName>
+<gn:alternateName xml:lang="la">Orbs</gn:alternateName>
+<gn:alternateName xml:lang="ro">Pamânt</gn:alternateName>
+<gn:alternateName xml:lang="it">Pianeta Terra</gn:alternateName>
+<gn:alternateName xml:lang="es">Planeta Tierra</gn:alternateName>
+<gn:alternateName xml:lang="eo">Tero</gn:alternateName>
+<gn:alternateName xml:lang="ca">Terra</gn:alternateName>
+<gn:officialName xml:lang="it">Terra</gn:officialName>
+<gn:alternateName xml:lang="la">Terra</gn:alternateName>
+<gn:alternateName xml:lang="fr">Terre</gn:alternateName>
+<gn:alternateName xml:lang="es">Tierra</gn:alternateName>
+<gn:alternateName xml:lang="de">Welt</gn:alternateName>
+<gn:alternateName xml:lang="en">World</gn:alternateName>
+<gn:officialName xml:lang="tr">Yeryüzü</gn:officialName>
+<gn:officialName xml:lang="lv">Zeme</gn:officialName>
+<gn:officialName xml:lang="pl">Ziemia</gn:officialName>
+<gn:officialName xml:lang="el">Γη</gn:officialName>
+<gn:alternateName xml:lang="el">Υδρόγειος</gn:alternateName>
+<gn:alternateName xml:lang="ru">Земля</gn:alternateName>
+<gn:featureClass rdf:resource="http://www.geonames.org/ontology#L"/>
+<gn:featureCode rdf:resource="http://www.geonames.org/ontology#L.AREA"/>
+<gn:population>6814400000</gn:population>
+<wgs84_pos:lat>0</wgs84_pos:lat>
+<wgs84_pos:long>0</wgs84_pos:long>
+<gn:childrenFeatures rdf:resource="http://sws.geonames.org/6295630/contains.rdf"/>
+<gn:locationMap rdf:resource="http://www.geonames.org/6295630/earth.html"/>
+</gn:Feature>
+<foaf:Document rdf:about="http://sws.geonames.org/6295630/about.rdf">
+<foaf:primaryTopic rdf:resource="http://sws.geonames.org/6295630/"/>
+<cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+<cc:attributionURL rdf:resource="http://sws.geonames.org/6295630/"/>
+<cc:attributionName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeoNames</cc:attributionName>
+<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-10-17</dcterms:created>
+<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-02-03</dcterms:modified>
+</foaf:Document>
+</rdf:RDF>

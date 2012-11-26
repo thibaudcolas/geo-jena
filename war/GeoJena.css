@@ -117,6 +117,17 @@ header > .f3 {
     margin:10px;
 }
 
+.roundbox {
+  background-color:#fff;
+  border-radius:10px;
+  border:1px solid #ddd;
+  padding:10px;
+}
+
+.container img {
+  margin:auto;
+}
+
 footer .container {
   margin-top:10px;
   text-align:center;

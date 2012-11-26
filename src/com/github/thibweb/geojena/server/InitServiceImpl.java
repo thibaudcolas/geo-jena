@@ -11,6 +11,6 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 public class InitServiceImpl extends RemoteServiceServlet implements InitService {
 	
 	public void init() {
-		QueryHelper.readModel("ontology_v2.rdf");
+		QueryHelper.readModel("rdf/ontology_v2.rdf");
 	}
 }
