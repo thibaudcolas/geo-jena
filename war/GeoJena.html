@@ -59,11 +59,14 @@
                 <div  class="container roundbox">
                 <h2>Questions sur le modèle</h2>
                 <h3>Une feature, au sens geonames, admet t'elle un et un seul code de feature ?</h3>
-                <p>Réponse</p>
+                <p>On s'intéresse à gn:featureCode reliant codes et features, or, sa définition ne précise aucune cardinalité, le commentaire associé est évasif et la propriété <a href="http://www.w3.org/TR/2005/WD-swbp-skos-core-spec-20051102/#subject" title="skos:subject dans la version 2005-09-29 de SKOS">skos:subject</a> dont featureCode hérite a été <a href="http://www.w3.org/TR/skos-reference/#div-appendix-namespace" title="Liste des modifications récentes">supprimée de SKOS</a>.</p>
+                <p>En cherchant plus loin, <a href="http://www.geonames.org/ontology/ontology_v3.1.rdf" title="Version 3.1, novembre 2012">la dernière version de l'ontologie</a> (3.1) définit très clairement une cardinalité maximale de 1 pour featureCode, tranchant la question pour cette version. Dans la <a href="rdf/ontology_v2.rdf" title="Version utilisée ici">version 2.0 lite</a> que nous utilisons, tout reste donc théoriquement possible mais la logique de l'ontologie veut que chaque feature n'admette qu'un seul code. On notera enfin que <a href="http://www.geonames.org/statistics/total.html" title="Nombre de features par code">selon le site de GeoNames</a>, un peu plus de 5000 features n'ont aucun code de défini.</p>
+                
                 <h3>Citez quelques éléments du modèle SKOS non exploités, au sein de geonames</h3>
-                <p>Réponse</p>
+                <p>L'ontologie Geonames utilise les classes <a href="http://www.w3.org/TR/skos-reference/#concepts">skos:Concept</a> (codes) et <a href="http://www.w3.org/TR/skos-reference/#schemes">skos:ConceptScheme</a> (classes), manifestant la volonté de classifier les idées / concepts rattachés aux features, mais ce sans pour autant s'être occupé de gérer les relations entre les concepts en question. <br/>Par exemple, les <a href="http://www.w3.org/TR/skos-reference/#collections">collections de concepts</a> skos:Collection et skos:OrderedCollection ne sont pas utilisées, ni les <a href="http://www.w3.org/TR/skos-reference/#semantic-relations">relations entre concepts</a> skos:broader et skos:narrower qui auraient permis d'obtenir une organisation moins horizontal des codes au sein d'une même classe.</p>
+                
                 <h3>Quelle est, de loin, la classe la moins décrite au sein de l'ontologie geonames ?</h3>
-                <p>Réponse</p>
+                <p>La classe la moins décrite est #P ("city, village,.."), avec seulement onze codes associés.</p>
                 </div>
             </div>
         </div>
@@ -71,8 +74,7 @@
     <footer>
       <div class="container">
         <hr/>
-        <p>Un projet par Mathilde Salthun-Lassalle et <a href="http://thibaudcolas.fr">Thibaud Colas</a>.<br/>
-        Réalisé avec <a href="https://jena.apache.org/">Apache Jena</a>, <a href="https://developers.google.com/web-toolkit/">Google Web Toolkit</a> et <a href="https://developers.google.com/appengine/">Google App Engine</a>.</p>
+        <p>Réalisé avec <a href="https://jena.apache.org/">Apache Jena</a>, <a href="https://developers.google.com/web-toolkit/">Google Web Toolkit</a> et <a href="https://developers.google.com/appengine/">Google App Engine</a>.</p>
       </div>
     </footer>
   </body>

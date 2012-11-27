@@ -10,6 +10,7 @@ import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.query.Syntax;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.util.FileManager;
@@ -65,7 +66,7 @@ public class QueryHelper {
 	
 	public static ResultSet sendQuery(String queryString) {
 		LOG.info("Query : " + queryString);
-		Query q = QueryFactory.create(queryString);
+		Query q = QueryFactory.create(queryString, Syntax.syntaxSPARQL_11);
 		QueryExecution ex = QueryExecutionFactory.create(q, m);
 		ResultSet rs = ex.execSelect();
 		return rs;
@@ -107,18 +108,24 @@ public class QueryHelper {
 		return ret;
 	}
 	
-	public static LinkedList<LinkedList<String>> retrieveResult(String select, String variables, String where) {
+	public static LinkedList<LinkedList<String>> retrieveResult(String variables, String where, String select) {
 		LinkedList<LinkedList<String>> ret = new LinkedList<LinkedList<String>>();
 		LinkedList<String> variablesList = getVariablesList(variables);
 		
-		String query = writeQuery(select, where);
+		String query = writeQuery(select, where) + NL + "GROUP BY " + select.split(" ")[0];
 		
 		ResultSet rs = sendQuery(query);
 		LinkedList<String> tmp;
 		QuerySolution qs;
 		while (rs.hasNext()) {
 			qs = rs.nextSolution();
-			
+			LOG.info("!!!!!!!! " + qs.varNames());
+			LOG.info("!!!!!!!! " + qs.varNames());
+			LOG.info("!!!!!!!! " + qs.varNames());
+			LOG.info("!!!!!!!! " + qs.varNames());
+			LOG.info("!!!!!!!! " + qs.varNames());
+			LOG.info("!!!!!!!! " + qs.varNames());
+			LOG.info("!!!!!!!! " + qs.varNames());
 			tmp = new LinkedList<String>();
 			for (String var : variablesList) {
 				tmp.add(qs.get(var).toString());
@@ -129,23 +136,5 @@ public class QueryHelper {
 		LOG.info("Query result size : " + ret.size());
 		
 		return ret;
-	}
-
-	public static void main( String[] args ) {
-		readModel("ontology_v2.rdf");
-		// FILTER ( lang(?label) = \"en\" )
-		String q1 = "?code a gn:Code . ?code core:inScheme ?scheme . ?code core:prefLabel ?label . ?code core:definition ?definition";
-		String v1 = "?code ?scheme ?label ?definition";
-		//printResult(sendQuery(writeQuery(v1, q1)), v1);
-		String q2 = "?code core:inScheme gn:V . ?code core:definition ?definition";
-		String v2 = "?code ?definition";
-		//printResult(sendQuery(writeQuery(v2, q2)), v2);
-		String q3 = "?code core:inScheme ?scheme";
-		String v3 = "?scheme ?count";
-		//printResult(sendQuery("SELECT ?scheme (count(?code) AS ?count) WHERE {?code <http://www.w3.org/2004/02/skos/core#inScheme> ?scheme} GROUP BY ?scheme"), "?scheme ?count");
-		//printResult(sendQuery("SELECT (count(?code) AS ?nombre) WHERE {?code a <http://www.geonames.org/ontology#Code> . } GROUP BY ?code"), "?nombre");
-		String q4 = "?code a gn:Code . ?code core:definition ?definition FILTER regex(?definition, \"ice\")";
-		String v4 = "?code ?definition";
-		//printResult(sendQuery(writeQuery(v4, q4)), v4);
 	}
 }

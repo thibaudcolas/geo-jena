@@ -8,11 +8,12 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
  * The async counterpart of <code>ExplorerService</code>.
  */
 public interface ExplorerServiceAsync {
+
+	void writeQuery(String variables, String where, AsyncCallback<String> callback);
 	
-	void initializeExplorer(AsyncCallback<Integer> callback);
-	
-	void explorerServer(String input, AsyncCallback<String> callback) throws IllegalArgumentException;
-	void writeQuery(String variables, String where, AsyncCallback<String> callback) throws IllegalArgumentException;
+	void writeQuery(String variables, String where, String select, AsyncCallback<String> callback);
 	
 	void retrieveResult(String variables, String where, AsyncCallback<LinkedList<LinkedList<String>>> callback);
+	
+	void retrieveResult(String variables, String where, String select, AsyncCallback<LinkedList<LinkedList<String>>> callback);
 }

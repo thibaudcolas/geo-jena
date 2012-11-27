@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:gn="http://www.geonames.org/ontology#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
+<gn:Feature rdf:about="http://sws.geonames.org/6454034/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/6454034/about.rdf"/>
+<gn:name>Montpellier</gn:name>
+<gn:alternateName xml:lang="ko">몽펠리에</gn:alternateName>
+<gn:alternateName xml:lang="ja">モンペリエ</gn:alternateName>
+<gn:alternateName xml:lang="th">มงแปลีเย</gn:alternateName>
+<gn:alternateName xml:lang="lt">Monpeljė</gn:alternateName>
+<gn:alternateName xml:lang="lv">Monpeljē</gn:alternateName>
+<gn:alternateName xml:lang="la">Monspessulanus</gn:alternateName>
+<gn:alternateName xml:lang="oc">Montpelhièr</gn:alternateName>
+<gn:alternateName xml:lang="an">Montpeller</gn:alternateName>
+<gn:alternateName xml:lang="ca">Montpeller</gn:alternateName>
+<gn:alternateName xml:lang="frp">Montpelyiér</gn:alternateName>
+<gn:alternateName xml:lang="ar">مونبيلييه</gn:alternateName>
+<gn:alternateName xml:lang="fa">مون‌پلیه</gn:alternateName>
+<gn:alternateName xml:lang="pnb">مونٹپلائیر</gn:alternateName>
+<gn:alternateName xml:lang="he">מונפלייה</gn:alternateName>
+<gn:alternateName xml:lang="el">Μονπελιέ</gn:alternateName>
+<gn:alternateName xml:lang="be">Горад Манпелье</gn:alternateName>
+<gn:alternateName xml:lang="bg">Монпелие</gn:alternateName>
+<gn:alternateName xml:lang="mk">Монпелие</gn:alternateName>
+<gn:alternateName xml:lang="cv">Монпелье</gn:alternateName>
+<gn:alternateName xml:lang="os">Монпелье</gn:alternateName>
+<gn:alternateName xml:lang="ru">Монпелье</gn:alternateName>
+<gn:alternateName xml:lang="uk">Монпельє</gn:alternateName>
+<gn:alternateName xml:lang="sr">Монпеље</gn:alternateName>
+<gn:alternateName xml:lang="ka">მონპელიე</gn:alternateName>
+<gn:alternateName xml:lang="mr">माँतपेलिए</gn:alternateName>
+<gn:alternateName xml:lang="gan">蒙彼利埃</gn:alternateName>
+<gn:alternateName xml:lang="wuu">蒙彼利埃</gn:alternateName>
+<gn:alternateName xml:lang="zh">蒙彼利埃</gn:alternateName>
+<gn:featureClass rdf:resource="http://www.geonames.org/ontology#A"/>
+<gn:featureCode rdf:resource="http://www.geonames.org/ontology#A.ADM4"/>
+<gn:countryCode>FR</gn:countryCode>
+<gn:population>255080</gn:population>
+<wgs84_pos:lat>43.6113</wgs84_pos:lat>
+<wgs84_pos:long>3.8771</wgs84_pos:long>
+<gn:parentFeature rdf:resource="http://sws.geonames.org/2992165/"/>
+<gn:parentCountry rdf:resource="http://sws.geonames.org/3017382/"/>
+<gn:parentADM1 rdf:resource="http://sws.geonames.org/3007670/"/>
+<gn:parentADM2 rdf:resource="http://sws.geonames.org/3013500/"/>
+<gn:parentADM3 rdf:resource="http://sws.geonames.org/2992165/"/>
+<gn:childrenFeatures rdf:resource="http://sws.geonames.org/6454034/contains.rdf"/>
+<gn:locationMap rdf:resource="http://www.geonames.org/6454034/montpellier.html"/>
+<owl:sameAs rdf:resource="http://rdf.insee.fr/geo/COM_34172"/>
+</gn:Feature>
+<foaf:Document rdf:about="http://sws.geonames.org/6454034/about.rdf">
+<foaf:primaryTopic rdf:resource="http://sws.geonames.org/6454034/"/>
+<cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+<cc:attributionURL rdf:resource="http://sws.geonames.org/6454034/"/>
+<cc:attributionName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeoNames</cc:attributionName>
+<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-04-01</dcterms:created>
+<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-05-10</dcterms:modified>
+</foaf:Document>
+</rdf:RDF>

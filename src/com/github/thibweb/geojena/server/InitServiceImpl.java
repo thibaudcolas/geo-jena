@@ -12,5 +12,8 @@ public class InitServiceImpl extends RemoteServiceServlet implements InitService
 	
 	public void init() {
 		QueryHelper.readModel("rdf/ontology_v2.rdf");
+		QueryHelper.readModel("rdf/embrun.rdf");
+		QueryHelper.readModel("rdf/montpellier.rdf");
+		QueryHelper.readModel("rdf/saint-felix.rdf");
 	}
 }
