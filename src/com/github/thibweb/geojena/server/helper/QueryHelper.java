@@ -1,5 +1,6 @@
 package com.github.thibweb.geojena.server.helper;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 import org.apache.log4j.Logger;
@@ -19,122 +20,115 @@ import com.hp.hpl.jena.vocabulary.RDF;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
 /**
- * This class helps writing / executing SPARQL queries on the GeoNames ontology.
+ * Cette classe aide à la manipulation de requêtes SPARQL et de leurs résultats.
  * @author tcolas
  *
  */
 public class QueryHelper {
-
-	// Use the same line separator everywhere.
 	public static final String NL = System.getProperty("line.separator");
-	
-	// Prefixes used in the GeoNames ontology.
+
+	// Préfixes utilisés dans GeoNames.
 	public static final String GN = "gn";
 	public static final String GN_NS = "http://www.geonames.org/ontology#";
 	public static final String SKOS = "core";
 	public static final String SKOS_NS = "http://www.w3.org/2004/02/skos/core#";
 	
+	private QueryHelper() {
+		
+	}
+
 	private static Model m = ModelFactory.createDefaultModel();
-	
+
 	private static Logger LOG = Logger.getLogger("QueryManager");
-	
+
+	// Prend un fichier RDF et l'ajoute à notre modele.
 	public static int readModel(String filePath) {
 		FileManager.get().readModel(m, filePath);
 		LOG.info("Model loaded : " + filePath + " -> " + m.size());
-		
-		return (int)m.size();
+
+		return (int) m.size();
 	}
-	
+
 	public static String getQueryPrefix(String alias, String namespace) {
-		return "PREFIX " + alias + ": <" + namespace + "> " + NL;
+		return "PREFIX " + alias + ": <" + namespace + ">" + NL;
 	}
-	
-	// Writes a query by combining variables to retrieve, the WHERE part and prefixes. No FROM keyword here.
-	public static String writeQuery(String variables, String where) {
-		return getQueryPrefix(GN, GN_NS)
+
+	// Écrit une requête en comparant ses différentes parties.
+	public static String writeQuery(String select, String where) {
+		String ret =  getQueryPrefix(GN, GN_NS)
 				+ getQueryPrefix(SKOS, SKOS_NS)
 				+ getQueryPrefix("rdf", RDF.getURI())
 				+ getQueryPrefix("rdfs", RDFS.getURI())
 				+ getQueryPrefix("owl", OWL.getURI())
-				+ "SELECT " + variables + NL
+				+ "SELECT " + select + NL
 				+ "WHERE {" + where + "}";
+		// Si le select contient un count, on utilise le premier élément renvoyé comme groupement pour le count.
+		// TODO trouver un moyen plus propre.
+		if (select.contains("COUNT") || select.contains("count")) {
+			ret += NL + "GROUP BY " + select.split(" ")[0];
+		}
+
+		return ret;
 	}
-	
-	public static String writeQuery(String variables, String where, int limit) {
-		return writeQuery(variables, where) + NL + "LIMIT " + limit;
+
+	// Écriture de requêtes avec ajout d'une limite.
+	public static String writeQuery(String select, String where, int limit) {
+		return writeQuery(select, where) + NL + "LIMIT " + limit;
 	}
-	
+
+	// Lance une requête à l'aide de l'API Jena ARQ.
 	public static ResultSet sendQuery(String queryString) {
 		LOG.info("Query : " + queryString);
+		// On précise la syntaxe SPARQL 1.1 pour profiter des capacités de ARQ.
 		Query q = QueryFactory.create(queryString, Syntax.syntaxSPARQL_11);
 		QueryExecution ex = QueryExecutionFactory.create(q, m);
 		ResultSet rs = ex.execSelect();
 		return rs;
 	}
-	
-	// Here we assume that variables is formatted as : "?var1 ?var2 ?var3".
-	private static LinkedList<String> getVariablesList(String variables) {
+
+	// Transformation de la liste de variables d'une requête dans un format plus simple.
+	private static LinkedList<String> getVariablesList(Iterator<String> varNames) {
 		LinkedList<String> ret = new LinkedList<String>();
-		String[] tmpVars = variables.split("\\?");
-		
-		for(int i = 1; i < tmpVars.length; i++) {
-			ret.add(tmpVars[i].trim());
+		while (varNames.hasNext()) {
+			ret.add(varNames.next());
 		}
-				
+
 		return ret;
 	}
-	
-	public static LinkedList<LinkedList<String>> retrieveResult(String variables, String where) {
+
+	/**
+	 * Écrit, lance et répond à une requête SPARQL SELECT définie par ses sections SELECT et WHERE.
+	 * Utilise la syntaxe SPARQL 1.1.
+	 * @param select Le SELECT de la requête SPARQL.
+	 * @param where Le WHERE de la requête.
+	 * @return Les résultats sous un format simple à réutiliser : liste de listes.
+	 */
+	public static LinkedList<LinkedList<String>> retrieveResult(String select, String where) {
 		LinkedList<LinkedList<String>> ret = new LinkedList<LinkedList<String>>();
-		LinkedList<String> variablesList = getVariablesList(variables);
-		
-		String query = writeQuery(variables, where, 100);
-		
+		LinkedList<String> variablesList;
+
+		// Écriture de la requête.
+		String query = writeQuery(select, where, 100);
+
+		// Lancement.
 		ResultSet rs = sendQuery(query);
 		LinkedList<String> tmp;
 		QuerySolution qs;
+
 		while (rs.hasNext()) {
 			qs = rs.nextSolution();
-			
+			// Récupération des variables contenues dans les résultats.
+			variablesList = getVariablesList(qs.varNames());
 			tmp = new LinkedList<String>();
+			// Ajout dans la liste.
 			for (String var : variablesList) {
 				tmp.add(qs.get(var).toString());
 			}
 			ret.add(tmp);
 		}
-		
-		LOG.info("Query result size : " + ret.size());
-		
-		return ret;
-	}
-	
-	public static LinkedList<LinkedList<String>> retrieveResult(String variables, String where, String select) {
-		LinkedList<LinkedList<String>> ret = new LinkedList<LinkedList<String>>();
-		LinkedList<String> variablesList = getVariablesList(variables);
-		
-		String query = writeQuery(select, where) + NL + "GROUP BY " + select.split(" ")[0];
-		
-		ResultSet rs = sendQuery(query);
-		LinkedList<String> tmp;
-		QuerySolution qs;
-		while (rs.hasNext()) {
-			qs = rs.nextSolution();
-			LOG.info("!!!!!!!! " + qs.varNames());
-			LOG.info("!!!!!!!! " + qs.varNames());
-			LOG.info("!!!!!!!! " + qs.varNames());
-			LOG.info("!!!!!!!! " + qs.varNames());
-			LOG.info("!!!!!!!! " + qs.varNames());
-			LOG.info("!!!!!!!! " + qs.varNames());
-			LOG.info("!!!!!!!! " + qs.varNames());
-			tmp = new LinkedList<String>();
-			for (String var : variablesList) {
-				tmp.add(qs.get(var).toString());
-			}
-			ret.add(tmp);
-		}
-		
-		LOG.info("Query result size : " + ret.size());
-		
+
+		LOG.info("Query result size : " + ret.size() + " triples for " + where);
+
 		return ret;
 	}
 }

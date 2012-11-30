@@ -7,24 +7,18 @@ import com.github.thibweb.geojena.server.helper.QueryHelper;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 /**
- * The server side implementation of the RPC service.
+ * Implémentation du service d'écriture / exécution des requêtes.
  */
 @SuppressWarnings("serial")
 public class ExplorerServiceImpl extends RemoteServiceServlet implements ExplorerService {
 	
-	public String writeQuery(String variables, String where) {
-		return QueryHelper.writeQuery(variables, where, 100);
+	// Écriture de requêtes simplifiée.
+	public String writeQuery(String select, String where) {
+		return QueryHelper.writeQuery(select, where, 100);
 	}
 	
-	public String writeQuery(String variables, String where, String select) {
-		return QueryHelper.writeQuery(select, where) + QueryHelper.NL + "GROUP BY " + select.split(" ")[0];
-	}
-	
-	public LinkedList<LinkedList<String>> retrieveResult(String variables, String where) {
-		return QueryHelper.retrieveResult(variables, where);
-	}
-	
-	public LinkedList<LinkedList<String>> retrieveResult(String variables, String where, String select) {
-		return QueryHelper.retrieveResult(variables, where, select);
+	// Envoi de requêtes simplifié.
+	public LinkedList<LinkedList<String>> retrieveResult(String select, String where) {
+		return QueryHelper.retrieveResult(select, where);
 	}
 }

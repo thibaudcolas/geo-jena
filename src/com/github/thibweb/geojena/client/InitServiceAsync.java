@@ -3,7 +3,7 @@ package com.github.thibweb.geojena.client;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 /**
- * The async counterpart of <code>ExplorerService</code>.
+ * Pendant asynchrone du service d'initialisation du modèle.
  */
 public interface InitServiceAsync {
 	

@@ -1,5 +1,14 @@
 /** Add css rules here for your application. */
+
+* {
+  /* Layout plus simple avec le box model border-box. */
+  -webkit-box-sizing:border-box;
+     -moz-box-sizing:border-box;
+          box-sizing:border-box;
+}
+
 html, body {
+    /* Override des styles par défaut de GWT. */
     width:100% !important;
     height:100% !important;
     margin:0 !important;
@@ -7,7 +16,10 @@ html, body {
 }
 
 body {
-    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;color:#333333;
+    font-family:'Helvetica Neue Light', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size:14px;
+    line-height:20px;
+    color:#333;
     text-align:justify;
     background-color: #eee !important;
 }
@@ -37,7 +49,6 @@ body:before {
   -webkit-overflow-scrolling:touch;
 }
 
-/** Example rules used by the template application (remove for your app) */
 h1 {
   font-size: 250%;
   font-weight: bold;
@@ -53,32 +64,18 @@ h1 a {
   text-shadow:1px 1px 1px #fff, 1px 1px 1px #000;
 }
 
-h1, h2, h3, h4, .nav a {
-    font-family:'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, sans-serif;
+h1, h2, h3, h4, .nav a, .gwt-Label {
+    font-family:'Helvetica Neue Light', 'Helvetica Neue', Helvetica, sans-serif;
     font-weight:normal
 }
 
-.sendButton {
-  display: block;
-  font-size: 16pt;
+.gwt-Label {
+  font-size:110%;
 }
 
-/** Most GWT widgets already have a style name defined */
-.gwt-DialogBox {
-  width: 400px;
-}
-
-.dialogVPanel {
-  margin: 5px;
-}
-
-.serverResponseLabelError {
-  color: red;
-}
-
-/** Set ids using widget.getElement().setId("idOfElement") */
-#closeButton {
-  margin: 15px 6px 6px;
+h3:before {
+  content:'✗';
+  margin-right:15px;
 }
 
 #tabPanel, #tabPanel table {
@@ -86,7 +83,11 @@ h1, h2, h3, h4, .nav a {
 }
 
 footer {
-  min-height:200px;
+  min-height:150px;
+}
+
+header {
+  min-height:150px;
 }
 
 header > span {

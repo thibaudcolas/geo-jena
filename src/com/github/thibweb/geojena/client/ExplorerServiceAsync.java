@@ -5,15 +5,11 @@ import java.util.LinkedList;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 /**
- * The async counterpart of <code>ExplorerService</code>.
+ * Version asynchrone du service principal.
  */
 public interface ExplorerServiceAsync {
 
-	void writeQuery(String variables, String where, AsyncCallback<String> callback);
+	void writeQuery(String select, String where, AsyncCallback<String> callback);
 	
-	void writeQuery(String variables, String where, String select, AsyncCallback<String> callback);
-	
-	void retrieveResult(String variables, String where, AsyncCallback<LinkedList<LinkedList<String>>> callback);
-	
-	void retrieveResult(String variables, String where, String select, AsyncCallback<LinkedList<LinkedList<String>>> callback);
+	void retrieveResult(String select, String where, AsyncCallback<LinkedList<LinkedList<String>>> callback);
 }

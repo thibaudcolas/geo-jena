@@ -6,76 +6,80 @@
     <meta name="description" content="GeoJena is an exploration of the GeoNames ontology built with GWT, GAE and Apache Jena.">
     <meta name="author" content="Mathilde Salthun-Lassalle, Thibaud Colas">
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="GeoJena.css">
 
     <title>GeoNames Explorer</title>
 
-    <script type="text/javascript" language="javascript" src="geojena/geojena.nocache.js"></script>
+    <script type="text/javascript" src="geojena/geojena.nocache.js"></script>
   </head>
   <body>
     <header>
 	    <span class="f1 pull-left"></span>
 	    <span class="f2 pull-left"></span>
 	    <span class="f3 pull-left"></span>
-	    <a href="https://github.com/ThibWeb/geo-jena"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+	    <a href="https://github.com/ThibWeb/geo-jena"><img style="position: absolute; top: 0; right: 0; border: 0;" src="img/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
         
         <h1><a href="http://www.geonames.org/"><span class="geonames">GeoNames</span></a> Explorer avec <a href="https://jena.apache.org/">Jena</a></h1>
     </header>
+    
     <div id="main">
+    
 	    <noscript>
 	      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
 	        Your web browser must have JavaScript enabled
 	        in order for this application to display correctly.
 	      </div>
 	    </noscript>
-	    
-	    <table align="center">
-          <tr>
-            <td id="nameFieldContainer"></td>
-            <td id="sendButtonContainer"></td>
-          </tr>
-          <tr>
-            <td colspan="2" style="color:red;" id="errorLabelContainer"></td>
-          </tr>
-        </table>
         
+        <!-- Cette balise sera utilisée par JavaScript et peuplée par le TabPanel contenant toutes les données de l'application. -->
         <div id="tabPanel"></div>
         
+        <!-- Les trois éléments suivants vont être déplacés dans le TabPanel via JavaScript. -->
         <div class="container ">
             <div id="classDiagram">
                 <div  class="container roundbox">
                 <h2>Diagramme de classes de GeoNames</h2>
+                <p>Une classe gn:Name a été créée pour éviter les valeurs redondantes entre les différentes propriétés affiliées à gn:name.
+                <br/>La propriété gn:locatedIn ne précise pas de domaine, on a donc choisi la classe la plus générique possible : owl:Thing.
+                <br/>Les cardinalités sont pour la plupart déduites des commentaires des propriétés et par bon sens : par exemple, il n'existe pas de lieu qui soit dans deux pays à la fois.</p>
                 <img src="img/geonames-classes.png" alt="Diagramme de classes de GeoNames"/>
                 </div>
             </div>
             <div id="objectDiagram">
                 <div  class="container roundbox">
                 <h2>Diagramme d'instances de GeoNames pour la <a href="rdf/earth.rdf" title="Triplets RDF pour la Terre">Terre</a></h2>
+                <p>Les instances de ce diagramme sont tirées des données de la Terre mises en forme selon le diagramme de classes précédent.
+                <br/>On y remarque l'intérêt d'avoir extrait une classe Name : les valeurs des propriétés gn:name et gn:shortName sont partagées.</p>
                 <img src="img/geonames-instances.png" alt="Diagramme d'instances de GeoNames"/>
                 </div>
             </div>
             <div id="modelQuestions">
                 <div  class="container roundbox">
                 <h2>Questions sur le modèle</h2>
+                
                 <h3>Une feature, au sens geonames, admet t'elle un et un seul code de feature ?</h3>
                 <p>On s'intéresse à gn:featureCode reliant codes et features, or, sa définition ne précise aucune cardinalité, le commentaire associé est évasif et la propriété <a href="http://www.w3.org/TR/2005/WD-swbp-skos-core-spec-20051102/#subject" title="skos:subject dans la version 2005-09-29 de SKOS">skos:subject</a> dont featureCode hérite a été <a href="http://www.w3.org/TR/skos-reference/#div-appendix-namespace" title="Liste des modifications récentes">supprimée de SKOS</a>.</p>
-                <p>En cherchant plus loin, <a href="http://www.geonames.org/ontology/ontology_v3.1.rdf" title="Version 3.1, novembre 2012">la dernière version de l'ontologie</a> (3.1) définit très clairement une cardinalité maximale de 1 pour featureCode, tranchant la question pour cette version. Dans la <a href="rdf/ontology_v2.rdf" title="Version utilisée ici">version 2.0 lite</a> que nous utilisons, tout reste donc théoriquement possible mais la logique de l'ontologie veut que chaque feature n'admette qu'un seul code. On notera enfin que <a href="http://www.geonames.org/statistics/total.html" title="Nombre de features par code">selon le site de GeoNames</a>, un peu plus de 5000 features n'ont aucun code de défini.</p>
+                <p>En cherchant plus loin, <a href="http://www.geonames.org/ontology/ontology_v3.1.rdf" title="Version 3.1, novembre 2012">la dernière version de l'ontologie</a> (3.1) définit très clairement une cardinalité maximale de 1 pour featureCode, tranchant la question pour cette version. Dans la <a href="rdf/ontology_v2.rdf" title="Version utilisée ici">version 2.0 lite</a> que nous utilisons, tout reste donc théoriquement possible mais la logique de l'ontologie veut que chaque feature n'admette qu'un seul code. 
+                <br/>On notera enfin que selon les <a href="http://www.geonames.org/statistics/total.html" title="Nombre de features par code">statistiques des features</a> sur le site de GeoNames, sur un total de 8&nbsp;256&nbsp;671 features, seules 5&nbsp;319 features ne sont pas typées par un code (0,05%).</p>
                 
                 <h3>Citez quelques éléments du modèle SKOS non exploités, au sein de geonames</h3>
                 <p>L'ontologie Geonames utilise les classes <a href="http://www.w3.org/TR/skos-reference/#concepts">skos:Concept</a> (codes) et <a href="http://www.w3.org/TR/skos-reference/#schemes">skos:ConceptScheme</a> (classes), manifestant la volonté de classifier les idées / concepts rattachés aux features, mais ce sans pour autant s'être occupé de gérer les relations entre les concepts en question. <br/>Par exemple, les <a href="http://www.w3.org/TR/skos-reference/#collections">collections de concepts</a> skos:Collection et skos:OrderedCollection ne sont pas utilisées, ni les <a href="http://www.w3.org/TR/skos-reference/#semantic-relations">relations entre concepts</a> skos:broader et skos:narrower qui auraient permis d'obtenir une organisation moins horizontal des codes au sein d'une même classe.</p>
+                <p>&lt; Ajouter réponse Mathilde &gt;</p>
                 
                 <h3>Quelle est, de loin, la classe la moins décrite au sein de l'ontologie geonames ?</h3>
-                <p>La classe la moins décrite est #P ("city, village,.."), avec seulement onze codes associés.</p>
+                <p>&lt; Question impossible &gt;</p>
                 </div>
             </div>
         </div>
     </div>
+    
     <footer>
       <div class="container">
         <hr/>
-        <p>Réalisé avec <a href="https://jena.apache.org/">Apache Jena</a>, <a href="https://developers.google.com/web-toolkit/">Google Web Toolkit</a> et <a href="https://developers.google.com/appengine/">Google App Engine</a>.</p>
+        <p>Une exploration de l'ontologie <a href="http://www.geonames.org/"><span class="geonames">GeoNames</span></a> réalisée par <a href="http://github.com/masalthunlass">Mathilde Salthun-Lassalle</a> et <a href="http://thibaudcolas.fr">Thibaud Colas</a>.
+        <br/>Construit avec <a href="https://jena.apache.org/">Apache Jena</a>, <a href="https://developers.google.com/web-toolkit/">Google Web Toolkit</a> et <a href="https://developers.google.com/appengine/">Google App Engine</a>.</p>
       </div>
     </footer>
+    
   </body>
 </html>

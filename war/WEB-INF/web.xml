@@ -6,6 +6,8 @@
          xmlns="http://java.sun.com/xml/ns/javaee">
 
   <!-- Servlets -->
+  
+  <!-- Servlet principal qui écrira et exécutera les requêtes SPARQL. -->
   <servlet>
     <servlet-name>greetServlet</servlet-name>
     <servlet-class>com.github.thibweb.geojena.server.ExplorerServiceImpl</servlet-class>
@@ -15,6 +17,8 @@
     <servlet-name>greetServlet</servlet-name>
     <url-pattern>/geojena/greet</url-pattern>
   </servlet-mapping>
+  
+  <!-- Servlet appelé au lancement du serveur qui charge les données dans le modèle Jena. -->
   
   <servlet>
         <servlet-name>initServlet</servlet-name>

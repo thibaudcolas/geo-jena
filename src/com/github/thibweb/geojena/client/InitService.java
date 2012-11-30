@@ -4,7 +4,7 @@ import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
 /**
- * The client side stub for the RPC service.
+ * Service RPC appelé au lancement du serveur pour charger les données dans le modèle.
  */
 @RemoteServiceRelativePath("init")
 public interface InitService extends RemoteService {
