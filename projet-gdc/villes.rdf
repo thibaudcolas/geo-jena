@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rdf:RDF 
+xmlns:cc="http://creativecommons.org/ns#" 
+xmlns:dcterms="http://purl.org/dc/terms/" 
+xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+xmlns:gn="http://www.geonames.org/ontology#" 
+xmlns:owl="http://www.w3.org/2002/07/owl#" 
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#">
+
+<gn:Feature rdf:about="http://sws.geonames.org/2992771/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/2992771/about.rdf"/>
+<gn:name>Mont-de-Marsan</gn:name>
+<gn:alternateName xml:lang="ceb">Mont-de-Marsan</gn:alternateName>
+<gn:alternateName xml:lang="de">Mont-de-Marsan</gn:alternateName>
+<gn:alternateName xml:lang="en">Mont-de-Marsan</gn:alternateName>
+<gn:alternateName xml:lang="fr">Mont-de-Marsan</gn:alternateName>
+<gn:alternateName xml:lang="it">Mont-de-Marsan</gn:alternateName>
+<gn:alternateName xml:lang="ja">モン＝ド＝マルサン</gn:alternateName>
+<gn:alternateName xml:lang="nl">Mont-de-Marsan</gn:alternateName>
+<gn:alternateName xml:lang="pl">Mont-de-Marsan</gn:alternateName>
+<gn:alternateName xml:lang="pt">Mont-de-Marsan</gn:alternateName>
+<gn:alternateName xml:lang="ro">Mont-de-Marsan</gn:alternateName>
+<gn:alternateName xml:lang="ru">Мон-де-Марсан</gn:alternateName>
+<gn:alternateName xml:lang="sl">Mont-de-Marsan</gn:alternateName>
+<gn:alternateName xml:lang="sv">Mont-de-Marsan</gn:alternateName>
+<gn:featureClass rdf:resource="http://www.geonames.org/ontology#P"/>
+<gn:featureCode rdf:resource="http://www.geonames.org/ontology#P.PPLA2"/>
+<gn:countryCode>FR</gn:countryCode>
+<gn:population>36205</gn:population>
+<gn:postalCode>40000</gn:postalCode>
+<wgs84_pos:lat>43.89022</wgs84_pos:lat>
+<wgs84_pos:long>-0.49713</wgs84_pos:long>
+<gn:parentCountry rdf:resource="http://sws.geonames.org/3017382/"/>
+<gn:nearbyFeatures rdf:resource="http://sws.geonames.org/2992771/nearby.rdf"/>
+<gn:locationMap rdf:resource="http://www.geonames.org/2992771/mont-de-marsan.html"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/2968569/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/2968569/about.rdf"/>
+<gn:name>Villeneuve-de-Marsan</gn:name>
+<gn:featureClass rdf:resource="http://www.geonames.org/ontology#P"/>
+<gn:featureCode rdf:resource="http://www.geonames.org/ontology#P.PPL"/>
+<gn:countryCode>FR</gn:countryCode>
+<gn:population>2301</gn:population>
+<gn:postalCode>40190</gn:postalCode>
+<wgs84_pos:lat>43.88906</wgs84_pos:lat>
+<wgs84_pos:long>-0.30926</wgs84_pos:long>
+<gn:parentCountry rdf:resource="http://sws.geonames.org/3017382/"/>
+<gn:nearbyFeatures rdf:resource="http://sws.geonames.org/2968569/nearby.rdf"/>
+<gn:locationMap rdf:resource="http://www.geonames.org/2968569/villeneuve-de-marsan.html"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/3032556/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/3032556/about.rdf"/>
+<gn:name>Biscarrosse</gn:name>
+<gn:alternateName xml:lang="ceb">Biscarrosse</gn:alternateName>
+<gn:alternateName xml:lang="de">Biscarosse</gn:alternateName>
+<gn:alternateName xml:lang="en">Biscarrosse</gn:alternateName>
+<gn:alternateName xml:lang="fr">Biscarrosse</gn:alternateName>
+<gn:alternateName xml:lang="it">Biscarrosse</gn:alternateName>
+<gn:alternateName xml:lang="nl">Biscarrosse</gn:alternateName>
+<gn:alternateName xml:lang="pl">Biscarrosse</gn:alternateName>
+<gn:alternateName xml:lang="pt">Biscarrosse</gn:alternateName>
+<gn:alternateName xml:lang="sr">Biscarrosse</gn:alternateName>
+<gn:alternateName xml:lang="vi">Biscarrosse</gn:alternateName>
+<gn:featureClass rdf:resource="http://www.geonames.org/ontology#P"/>
+<gn:featureCode rdf:resource="http://www.geonames.org/ontology#P.PPL"/>
+<gn:countryCode>FR</gn:countryCode>
+<gn:population>10716</gn:population>
+<gn:postalCode>40600</gn:postalCode>
+<wgs84_pos:lat>44.39454</wgs84_pos:lat>
+<wgs84_pos:long>-1.16721</wgs84_pos:long>
+<gn:parentCountry rdf:resource="http://sws.geonames.org/3017382/"/>
+<gn:nearbyFeatures rdf:resource="http://sws.geonames.org/3032556/nearby.rdf"/>
+<gn:locationMap rdf:resource="http://www.geonames.org/3032556/biscarrosse.html"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/2977462/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/2977462/about.rdf"/>
+<gn:name>Saint-Pierre-du-Mont</gn:name>
+<gn:featureClass rdf:resource="http://www.geonames.org/ontology#P"/>
+<gn:featureCode rdf:resource="http://www.geonames.org/ontology#P.PPL"/>
+<gn:countryCode>FR</gn:countryCode>
+<gn:population>7660</gn:population>
+<gn:postalCode>40280</gn:postalCode>
+<wgs84_pos:lat>43.88453</wgs84_pos:lat>
+<wgs84_pos:long>-0.52185</wgs84_pos:long>
+<gn:parentCountry rdf:resource="http://sws.geonames.org/3017382/"/>
+<gn:nearbyFeatures rdf:resource="http://sws.geonames.org/2977462/nearby.rdf"/>
+<gn:locationMap rdf:resource="http://www.geonames.org/2977462/saint-pierre-du-mont.html"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/2992770/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/2992770/about.rdf"/>
+<gn:name>Arrondissement de Mont-de-Marsan</gn:name>
+<gn:featureClass rdf:resource="http://www.geonames.org/ontology#A"/>
+<gn:featureCode rdf:resource="http://www.geonames.org/ontology#A.ADM3"/>
+<gn:countryCode>FR</gn:countryCode>
+<gn:population>178668</gn:population>
+<wgs84_pos:lat>44</wgs84_pos:lat>
+<wgs84_pos:long>-0.66667</wgs84_pos:long>
+<gn:parentCountry rdf:resource="http://sws.geonames.org/3017382/"/>
+<gn:childrenFeatures rdf:resource="http://sws.geonames.org/2992770/contains.rdf"/>
+<gn:locationMap rdf:resource="http://www.geonames.org/2992770/arrondissement-de-mont-de-marsan.html"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/2976942/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/2976942/about.rdf"/>
+<gn:name>Saint-Sever</gn:name>
+<gn:featureClass rdf:resource="http://www.geonames.org/ontology#P"/>
+<gn:featureCode rdf:resource="http://www.geonames.org/ontology#P.PPL"/>
+<gn:countryCode>FR</gn:countryCode>
+<gn:population>4913</gn:population>
+<gn:postalCode>40500</gn:postalCode>
+<wgs84_pos:lat>43.75727</wgs84_pos:lat>
+<wgs84_pos:long>-0.57357</wgs84_pos:long>
+<gn:parentCountry rdf:resource="http://sws.geonames.org/3017382/"/>
+<gn:nearbyFeatures rdf:resource="http://sws.geonames.org/2976942/nearby.rdf"/>
+<gn:locationMap rdf:resource="http://www.geonames.org/2976942/saint-sever.html"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/3030286/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/3030286/about.rdf"/>
+<gn:name>Bretagne-de-Marsan</gn:name>
+<gn:featureClass rdf:resource="http://www.geonames.org/ontology#P"/>
+<gn:featureCode rdf:resource="http://www.geonames.org/ontology#P.PPL"/>
+<gn:countryCode>FR</gn:countryCode>
+<gn:population>997</gn:population>
+<gn:postalCode>40280</gn:postalCode>
+<wgs84_pos:lat>43.84738</wgs84_pos:lat>
+<wgs84_pos:long>-0.46499</wgs84_pos:long>
+<gn:parentCountry rdf:resource="http://sws.geonames.org/3017382/"/>
+<gn:nearbyFeatures rdf:resource="http://sws.geonames.org/3030286/nearby.rdf"/>
+<gn:locationMap rdf:resource="http://www.geonames.org/3030286/bretagne-de-marsan.html"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/2967253/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/2967253/about.rdf"/>
+<gn:name>Ychoux</gn:name>
+<gn:featureClass rdf:resource="http://www.geonames.org/ontology#P"/>
+<gn:featureCode rdf:resource="http://www.geonames.org/ontology#P.PPL"/>
+<gn:countryCode>FR</gn:countryCode>
+<gn:population>1623</gn:population>
+<gn:postalCode>40160</gn:postalCode>
+<wgs84_pos:lat>44.32869</wgs84_pos:lat>
+<wgs84_pos:long>-0.9518</wgs84_pos:long>
+<gn:parentCountry rdf:resource="http://sws.geonames.org/3017382/"/>
+<gn:nearbyFeatures rdf:resource="http://sws.geonames.org/2967253/nearby.rdf"/>
+<gn:locationMap rdf:resource="http://www.geonames.org/2967253/ychoux.html"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/2976195/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/2976195/about.rdf"/>
+<gn:name>Sanguinet</gn:name>
+<gn:featureClass rdf:resource="http://www.geonames.org/ontology#P"/>
+<gn:featureCode rdf:resource="http://www.geonames.org/ontology#P.PPL"/>
+<gn:countryCode>FR</gn:countryCode>
+<gn:population>2168</gn:population>
+<gn:postalCode>40460</gn:postalCode>
+<wgs84_pos:lat>44.4832</wgs84_pos:lat>
+<wgs84_pos:long>-1.07457</wgs84_pos:long>
+<gn:parentCountry rdf:resource="http://sws.geonames.org/3017382/"/>
+<gn:nearbyFeatures rdf:resource="http://sws.geonames.org/2976195/nearby.rdf"/>
+<gn:locationMap rdf:resource="http://www.geonames.org/2976195/sanguinet.html"/>
+</gn:Feature>
+<gn:Feature rdf:about="http://sws.geonames.org/2993830/">
+<rdfs:isDefinedBy rdf:resource="http://sws.geonames.org/2993830/about.rdf"/>
+<gn:name>Mimizan</gn:name>
+<gn:featureClass rdf:resource="http://www.geonames.org/ontology#P"/>
+<gn:featureCode rdf:resource="http://www.geonames.org/ontology#P.PPL"/>
+<gn:countryCode>FR</gn:countryCode>
+<gn:population>6565</gn:population>
+<gn:postalCode>40200</gn:postalCode>
+<wgs84_pos:lat>44.20057</wgs84_pos:lat>
+<wgs84_pos:long>-1.22886</wgs84_pos:long>
+<gn:parentCountry rdf:resource="http://sws.geonames.org/3017382/"/>
+<gn:nearbyFeatures rdf:resource="http://sws.geonames.org/2993830/nearby.rdf"/>
+<gn:locationMap rdf:resource="http://www.geonames.org/2993830/mimizan.html"/>
+</gn:Feature>
+</rdf:RDF>
