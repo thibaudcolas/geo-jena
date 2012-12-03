@@ -4,6 +4,8 @@ Cette application est une expérimentation réalisée sur l'ontologie GeoNames d
 
 Adresse de l'application : [http://geo-jena.appspot.com/](http://geo-jena.appspot.com/)
 
+Application de Mathilde : dossier "projet-gdc"
+
 ## Fonctionnalités ##
 
 GeoJena est constituée d'une unique page divisée en plusieurs onglets. Les trois premiers onglets sont des réponses aux questions du projet, et les six suivantes sont des requêtes SPARQL.
@@ -60,3 +62,7 @@ public static ResultSet sendQuery(String queryString) {
 ## Hébergement ##
 
 GeoJena est hébergé sur le [Google App Engine](https://developers.google.com/appengine/), un PaaS proposant d'héberger des applications Java, Go et Python.
+
+## Application Swing ##
+
+Une application fonctionnant selon le même principe mais utilisant une interface Swing est disponible dans le dossier "projet-gdc".
