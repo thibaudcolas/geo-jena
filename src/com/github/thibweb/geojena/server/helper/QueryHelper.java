@@ -1,4 +1,4 @@
-package com.github.thibweb.geojena.server.helper;
+package com.github.thibaudcolas.geojena.server.helper;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -32,9 +32,9 @@ public class QueryHelper {
 	public static final String GN_NS = "http://www.geonames.org/ontology#";
 	public static final String SKOS = "core";
 	public static final String SKOS_NS = "http://www.w3.org/2004/02/skos/core#";
-	
+
 	private QueryHelper() {
-		
+
 	}
 
 	private static Model m = ModelFactory.createDefaultModel();

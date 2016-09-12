@@ -1,4 +1,4 @@
-package com.github.thibweb.geojena.client;
+package com.github.thibaudcolas.geojena.client;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
@@ -6,6 +6,6 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
  * Pendant asynchrone du service d'initialisation du modèle.
  */
 public interface InitServiceAsync {
-	
+
 	void init(AsyncCallback callback);
 }

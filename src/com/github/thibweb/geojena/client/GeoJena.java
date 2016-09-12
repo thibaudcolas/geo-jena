@@ -1,4 +1,4 @@
-package com.github.thibweb.geojena.client;
+package com.github.thibaudcolas.geojena.client;
 
 import java.util.LinkedList;
 
